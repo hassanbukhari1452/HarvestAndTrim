@@ -150,8 +150,8 @@ p {
 }
 
 .logo-img {
-    height: 80px;
-    width: 80px;
+    height: 70px;
+    width: 70px;
     margin-right: 20px;
     border-radius: 50%;
 }
@@ -1047,12 +1047,41 @@ textarea:focus {
 .service-label {
     color: var(--text-white);
     font-weight: 500;
+    flex: 1;
+    text-align: left;
+    line-height: 1.4;
 }
 
 /* Submit Button States */
 .btn.enabled {
     background-color: var(--primary-green);
     transform: scale(1.02);
+    }
+
+/* iOS/Safari specific fixes */
+.service-option {
+    -webkit-user-select: none;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.star {
+    -webkit-tap-highlight-color: transparent;
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+/* Mobile touch improvements */
+@media (max-width: 768px) {
+    .service-option {
+        padding: 1.2rem;
+        min-height: 70px;
+    }
+    
+    .service-label {
+        font-size: 1rem;
+        line-height: 1.3;
+    }
 }
 
 /* Thank You Section */
@@ -1297,6 +1326,8 @@ textarea:focus {
     .service-options {
         grid-template-columns: 1fr;
     }
+
+    
 }
 
 @media (max-width: 768px) {
