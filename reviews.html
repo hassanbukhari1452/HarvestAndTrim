@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leave a Review | Harvest & Trim Tree Service</title>
+    <meta name="description" content="Share your experience with Harvest & Trim Tree Service. Your feedback helps us improve our tree care services in Durham, NC.">
+    <meta name="keywords" content="tree service review Durham, Harvest Trim feedback, tree care review NM">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Google Analytics Placeholder -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-XXXXX-X"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-XXXXX-X');
+    </script>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="logo">
+                    <img src="logo.png" alt="Harvest & Trim Tree Service" class="logo-img">
+                    <span>Harvest & Trim</span>
+                </div>
+                <ul class="nav-menu">
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="services.html" class="nav-link">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="contact.html" class="nav-link">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="serviceareas.html" class="nav-link">Service Areas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="about.html" class="nav-link">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="blog.html" class="nav-link">Blog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="contact.html" class="btn btn-primary nav-cta">Get a Free Quote</a>
+                    </li>
+                </ul>
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Reviews Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Share Your Experience</h1>
+            <p>Your feedback helps us continue providing excellent tree care services</p>
+        </div>
+    </section>
+
+    <!-- Review Form Section -->
+    <main class="reviews-main">
+        <div class="container">
+            <!-- Initial Review Form -->
+            <div id="review-form-section" class="review-section">
+                <div class="review-card">
+                    <h2>How was your experience with Harvest & Trim?</h2>
+                    <p class="review-subtitle">Please rate your overall satisfaction with our tree care services</p>
+                    
+                    <div class="star-rating">
+                        <div class="stars-container">
+                            <i class="fas fa-star star" data-rating="1"></i>
+                            <i class="fas fa-star star" data-rating="2"></i>
+                            <i class="fas fa-star star" data-rating="3"></i>
+                            <i class="fas fa-star star" data-rating="4"></i>
+                            <i class="fas fa-star star" data-rating="5"></i>
+                        </div>
+                        <div class="rating-labels">
+                            <span class="rating-text">Click a star to rate</span>
+                        </div>
+                    </div>
+
+                    <div class="service-info">
+                        <h3>What service did we provide?</h3>
+                        <div class="service-options">
+                            <label class="service-option">
+                                <input type="radio" name="service" value="tree-removal">
+                                <span class="service-label">Tree Removal</span>
+                            </label>
+                            <label class="service-option">
+                                <input type="radio" name="service" value="tree-trimming">
+                                <span class="service-label">Tree Trimming</span>
+                            </label>
+                            <label class="service-option">
+                                <input type="radio" name="service" value="stump-grinding">
+                                <span class="service-label">Stump Grinding</span>
+                            </label>
+                            <label class="service-option">
+                                <input type="radio" name="service" value="emergency">
+                                <span class="service-label">Emergency Service</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <button id="submit-rating" class="btn btn-primary btn-large" disabled>Submit Rating</button>
+                </div>
+            </div>
+
+            <!-- Thank You Section (for 5-star reviews) -->
+            <div id="thank-you-section" class="review-section" style="display: none;">
+                <div class="review-card thank-you-card">
+                    <div class="thank-you-content">
+                        <i class="fas fa-heart thank-you-icon"></i>
+                        <h2>Thank You!</h2>
+                        <p class="thank-you-message">We're thrilled that you had such a positive experience with our tree care services!</p>
+                        
+                        <div class="five-stars-display">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+
+                        <p class="google-review-text">Would you mind sharing your experience on Google to help other customers find us?</p>
+                        
+                        <div class="review-buttons">
+                            <a href="https://www.google.com/search?sca_esv=51537aeedf813448&sxsrf=AE3TifNyf-LdwIrU9x9x-EymO1WlQ9SRyA:1752501079854&si=AMgyJEtREmoPL4P1I5IDCfuA8gybfVI2d5Uj7QMwYCZHKDZ-E8l1H1gPXzpSCWF4wGx0_oSciDi9R34tupGRpwpBp3v2hfygQi6JpQj88gdr_UGb9flf6zsydZGcAFpttk4ioWG9UXLuWm6At_6506k86bSHysCocg%3D%3D&q=Harvest+%26+Trim+-+Tree+Service+Reviews&sa=X&ved=2ahUKEwj399Siv7yOAxWfgf0HHdSFO9wQ0bkNegQIIRAD&biw=1536&bih=695&dpr=1.25" 
+                               target="_blank" 
+                               class="btn btn-primary btn-large google-review-btn">
+                                <i class="fab fa-google"></i>
+                                Leave Google Review
+                            </a>
+                            <button id="maybe-later" class="btn btn-secondary">Maybe Later</button>
+                        </div>
+                        
+                        <p class="small-text">Your review will be posted publicly on Google</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Improvement Form Section (for 1-4 star reviews) -->
+            <div id="improvement-section" class="review-section" style="display: none;">
+                <div class="review-card improvement-card">
+                    <h2>Help Us Improve</h2>
+                    <p class="improvement-subtitle">We appreciate your feedback and want to do better. Please share how we can improve our services.</p>
+                    
+                    <div class="rating-display">
+                        <span>Your Rating: </span>
+                        <div class="selected-stars">
+                            <!-- Stars will be populated by JavaScript -->
+                        </div>
+                    </div>
+
+                    <iframe id="improvement-form" 
+                            src="https://docs.google.com/forms/d/e/1FAIpQLSfpTg7qmontwxlNFO5EsCYdvZitOAUp2XBGlOdbE03q_OBQpA/viewform?usp=header" 
+                            width="100%" 
+                            height="800" 
+                            frameborder="0" 
+                            marginheight="0" 
+                            marginwidth="0"
+                            style="border-radius: 10px;">
+                        Loading feedback form...
+                    </iframe>
+                    
+                    <div class="form-fallback">
+                        <p>If the form doesn't load, please <a href="https://docs.google.com/forms/d/e/1FAIpQLSfpTg7qmontwxlNFO5EsCYdvZitOAUp2XBGlOdbE03q_OBQpA/viewform?usp=header" target="_blank" class="improvement-link">click here to provide feedback</a></p>
+                    </div>
+                    
+                    <button id="back-to-rating" class="btn btn-secondary">Back to Rating</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials-showcase">
+        <div class="container">
+            <h2>What Our Customers Say</h2>
+            <div class="testimonials">
+                <div class="testimonial-card">
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p>"Outstanding service! Omar and his team removed three large trees safely and cleaned up perfectly. Highly recommended!"</p>
+                    <span class="customer-name">- Maria G., Durham</span>
+                </div>
+                <div class="testimonial-card">
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p>"Professional, prompt, and fairly priced. The crew was courteous and did excellent work trimming our oak trees."</p>
+                    <span class="customer-name">- Robert T., Durham</span>
+                </div>
+                <div class="testimonial-card">
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p>"Emergency tree removal after the storm. They came out within 2 hours and handled everything professionally. Thank you!"</p>
+                    <span class="customer-name">- Jennifer L., Durham</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="logo">
+                        <img src="logo.png" alt="Harvest & Trim Tree Service" class="logo-img">
+                        <span>Harvest & Trim</span>
+                    </div>
+                    <p>Professional tree care services serving Durham and surrounding areas with pride and expertise. Owned and operated by Omar Arezk.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <p><i class="fas fa-map-marker-alt"></i> Durham, NC</p>
+                    <p><a href="tel:+15053823822"><i class="fas fa-phone"></i> (505) 382-3822</a></p>
+                    <p><i class="fas fa-clock"></i> 24/7 Emergency Services</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="reviews.html">Reviews</a></li>
+                        <li><a href="#privacy">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Service Areas</h4>
+                    <p>Serving Durham & Surrounding Areas</p>
+                    <p>Licensed & Insured Tree Care Professionals</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Harvest & Trim Tree Service. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="main.js"></script>
+    <script src="reviews.js"></script>
+</body>
+</html>

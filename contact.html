@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Harvest & Trim Tree Service | Durham, NC</title>
+    <meta name="description" content="Contact Harvest & Trim for professional tree services in Durham, NC. Free quotes, 24/7 emergency services. Call (505) 382-3822 or fill out our contact form.">
+    <meta name="keywords" content="contact tree service Durham, tree removal quote NM, Durham tree care contact">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Google Analytics Placeholder -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-XXXXX-X"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-XXXXX-X');
+    </script>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="logo">
+                    <img src="logo.png" alt="Harvest & Trim Tree Service" class="logo-img">
+                    <span>Harvest & Trim</span>
+                </div>
+                <ul class="nav-menu">
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="services.html" class="nav-link">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="contact.html" class="nav-link">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="serviceareas.html" class="nav-link">Service Areas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="about.html" class="nav-link">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="blog.html" class="nav-link">Blog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="contact.html" class="btn btn-primary nav-cta">Get a Free Quote</a>
+                    </li>
+                </ul>
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Contact Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Contact Harvest & Trim Today</h1>
+            <p>Get your free quote and experience professional tree care service</p>
+        </div>
+    </section>
+
+    <!-- Contact Content -->
+    <main class="contact-main">
+        <div class="container">
+            <div class="contact-content">
+                <!-- Contact Form -->
+                <div class="contact-form-section">
+                    <h2>Request Your Free Quote</h2>
+                    <form id="contactForm" class="contact-form">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="contact-name">Full Name *</label>
+                                <input type="text" id="contact-name" name="name" required>
+                                <span class="error-message" id="contactNameError"></span>
+                            </div>
+                            <div class="form-group">
+                                <label for="contact-phone">Phone Number *</label>
+                                <input type="tel" id="contact-phone" name="phone" required>
+                                <span class="error-message" id="contactPhoneError"></span>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="contact-email">Email Address</label>
+                            <input type="email" id="contact-email" name="email">
+                            <span class="error-message" id="contactEmailError"></span>
+                        </div>
+                        <div class="form-group">
+                            <label for="contact-service">Service Needed *</label>
+                            <select id="contact-service" name="service" required>
+                                <option value="">Select a service</option>
+                                <option value="tree-removal">Tree Removal</option>
+                                <option value="tree-trimming">Tree Trimming</option>
+                                <option value="stump-grinding">Stump Grinding</option>
+                                <option value="emergency">Emergency Service</option>
+                                <option value="consultation">General Consultation</option>
+                            </select>
+                            <span class="error-message" id="contactServiceError"></span>
+                        </div>
+                        <div class="form-group">
+                            <label for="contact-message">Project Details</label>
+                            <textarea id="contact-message" name="message" rows="5" placeholder="Please describe your tree care needs, property details, and any specific concerns..."></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-large">Submit Request</button>
+                        <p class="form-note">Free Quotes | Response Within 24 Hours</p>
+                    </form>
+                    <div id="form-success" class="success-message" style="display: none;">
+                        <i class="fas fa-check-circle"></i>
+                        <h3>Thank you for your request!</h3>
+                        <p>We'll contact you within 24 hours to discuss your tree care needs and schedule your free estimate.</p>
+                    </div>
+                </div>
+
+                <!-- Contact Information -->
+                <div class="contact-info-section">
+                    <div class="contact-details">
+                        <h3>Get In Touch</h3>
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <div>
+                                <h4>Phone</h4>
+                                <a href="tel:+15053823822">(505) 382-3822</a>
+                                <span class="click-to-call">Click to call</span>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <h4>Service Area</h4>
+                                <p>Durham, NC<br>and surrounding areas</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-clock"></i>
+                            <div>
+                                <h4>Business Hours</h4>
+                                <p>Mon-Fri: 8:00 AM - 5:00 PM<br>
+                                   24/7 Emergency Services</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Trust Signals -->
+                    <div class="contact-trust">
+                        <div class="testimonial-highlight">
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <p>"Fast, professional service! Removed a large cottonwood safely and cleaned up perfectly."</p>
+                            <span class="customer-name">- John D., Durham</span>
+                        </div>
+                        <div class="trust-badge">
+                            <i class="fas fa-shield-alt"></i>
+                            <span>Fully Insured & Local</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Map Section -->
+            <div class="map-section">
+                <h3>Our Service Area</h3>
+                <div class="map-container">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d206577.00133878947!2d-79.04871242896473!3d36.001592410115954!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89ace471120f66f1%3A0xe17ada898a46f27e!2sDurham%2C%20NC%2C%20USA!5e0!3m2!1sen!2s!4v1752501641603!5m2!1sen!2s" 
+                        width="100%" 
+                        height="300" 
+                        style="border:0;" 
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+                <p class="map-caption">Proudly serving Durham and surrounding communities</p>
+            </div>
+        </div>
+    </main>
+
+    <!-- Emergency CTA -->
+    <section class="emergency-cta">
+        <div class="container">
+            <div class="emergency-content">
+                <i class="fas fa-exclamation-triangle"></i>
+                <div class="emergency-text">
+                    <h3>Tree Emergency?</h3>
+                    <p>We're available 24/7 for emergency tree situations</p>
+                </div>
+                <a href="tel:+15053823822" class="btn btn-emergency btn-large">Call Emergency Line</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="logo">
+                        <img src="logo.png" alt="Harvest & Trim Tree Service" class="logo-img">
+                        <span>Harvest & Trim</span>
+                    </div>
+                    <p>Professional tree care services serving Durham and surrounding areas with pride and expertise. Owned and operated by Omar Arezk.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <p><i class="fas fa-map-marker-alt"></i> Durham, NC</p>
+                    <p><a href="tel:+15053823822"><i class="fas fa-phone"></i> (505) 382-3822</a></p>
+                    <p><i class="fas fa-clock"></i> 24/7 Emergency Services</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="#privacy">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Service Areas</h4>
+                    <p>Serving Durham & Surrounding Areas</p>
+                    <p>Licensed & Insured Tree Care Professionals</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Harvest & Trim Tree Service. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="main.js"></script>
+</body>
+</html>
