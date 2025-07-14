@@ -34,8 +34,9 @@ function initStarRating(stars) {
             updateRatingText(index + 1);
         });
         
-        // Click events
-        star.addEventListener('click', function() {
+        // Click and touch events for iOS compatibility
+        const handleStarSelect = function(e) {
+            e.preventDefault();
             selectedRating = index + 1;
             selectStars(selectedRating);
             updateRatingText(selectedRating);
@@ -48,7 +49,10 @@ function initStarRating(stars) {
                     'event_label': `${selectedRating}_stars`
                 });
             }
-        });
+        };
+        
+        star.addEventListener('click', handleStarSelect);
+        star.addEventListener('touchend', handleStarSelect);
     });
     
     // Reset on mouse leave
@@ -82,11 +86,16 @@ function initServiceSelection(serviceOptions) {
 }
 
 function initSubmitButton(submitButton) {
-    submitButton.addEventListener('click', function() {
+    // Handle both click and touchend for iOS compatibility
+    const handleSubmit = function(e) {
+        e.preventDefault();
         if (selectedRating > 0 && selectedService) {
             handleRatingSubmission();
         }
-    });
+    };
+    
+    submitButton.addEventListener('click', handleSubmit);
+    submitButton.addEventListener('touchend', handleSubmit);
 }
 
 function initNavigationButtons() {
@@ -237,18 +246,31 @@ function redirect5StarToGoogle() {
     const submitButton = document.getElementById('submit-rating');
     submitButton.textContent = 'Redirecting to Google...';
     
-    // Direct redirect to Google Business Profile after short delay
-    setTimeout(() => {
-        window.open('https://www.google.com/search?sca_esv=51537aeedf813448&sxsrf=AE3TifMcTBf6IXyroRwskdz-i1Bg7aOH4A:1752501029684&si=AMgyJEtREmoPL4P1I5IDCfuA8gybfVI2d5Uj7QMwYCZHKDZ-E8l1H1gPXzpSCWF4wGx0_oSciDi9R34tupGRpwpBp3v2hfygQi6JpQj88gdr_UGb9flf6zsydZGcAFpttk4ioWG9UXLuWm6At_6506k86bSHysCocg%3D%3D&q=Harvest+%26+Trim+-+Tree+Service+Reviews&sa=X&ved=2ahUKEwiT5t6Kv7yOAxXU_7sIHZzvDTEQ0bkNegQIIhAD&biw=1536&bih=695&dpr=1.25', '_blank');
-        
-        // Show thank you overlay on current page
+    // iOS Safari fix: Open immediately without timeout to avoid popup blocking
+    const googleUrl = 'https://www.google.com/search?sca_esv=51537aeedf813448&sxsrf=AE3TifNrCcyYXbthzWXCLPTDsRcFWP8CEg:1752503057920&si=AMgyJEtREmoPL4P1I5IDCfuA8gybfVI2d5Uj7QMwYCZHKDZ-E8l1H1gPXzpSCWF4wGx0_oSciDi9R34tupGRpwpBp3v2hfygQi6JpQj88gdr_UGb9flf6zsydZGcAFpttk4ioWG9UXLuWm6At_6506k86bSHysCocg%3D%3D&q=Harvest+%26+Trim+-+Tree+Service+Reviews&sa=X&ved=2ahUKEwiyxvDRxryOAxWIVaQEHWQoITsQ0bkNegQIHhAD&biw=1536&bih=695&dpr=1.25';
+    
+    // Try window.open first (works on most browsers)
+    const newWindow = window.open(googleUrl, '_blank');
+    
+    // Fallback for Safari/iOS if popup was blocked
+    if (!newWindow || newWindow.closed || typeof newWindow.closed == 'undefined') {
+        // Show iOS-specific message and redirect
+        submitButton.textContent = 'Opening Google Review...';
         showThankYouMessage();
         
-        // Redirect to home page after a moment
+        // Fallback: change current window location after brief message
         setTimeout(() => {
-            window.location.href = 'index.html';
-        }, 2000);
-    }, 500);
+            window.location.href = googleUrl;
+        }, 1500);
+    } else {
+        // Show thank you overlay and redirect to home after short delay
+        setTimeout(() => {
+            showThankYouMessage();
+            setTimeout(() => {
+                window.location.href = 'index.html';
+            }, 2000);
+        }, 500);
+    }
 }
 
 function show5StarThankYou() {
