@@ -910,14 +910,13 @@ textarea:focus {
 }
 
 .review-card {
-    background-color: var(--secondary-bg);
-    padding: 3rem 2rem;
+    padding: 2rem 1.5rem;
     border-radius: 15px;
     box-shadow: 0 8px 30px var(--shadow-color);
     text-align: center;
     max-width: 600px;
     margin: 0 auto;
-    transition: transform 0.3s ease;
+    width: 100%;
 }
 
 .review-card.animate-in {
@@ -1009,28 +1008,38 @@ textarea:focus {
     margin: 2rem 0;
 }
 
-.service-info h3 {
-    color: var(--primary-green);
-    margin-bottom: 1.5rem;
-    font-size: 1.3rem;
-}
-
 .service-options {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 1rem;
-    margin-bottom: 2rem;
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    padding: 0 10px;
 }
 
 .service-option {
     display: flex;
-    align-items: center;
-    cursor: pointer;
-    padding: 1rem;
+    flex-direction: column; /* Stack children vertically */
+    align-items: flex-start; /* Align items to the left */
+    padding: 0.8rem;
     background-color: var(--primary-bg);
     border-radius: 8px;
     border: 2px solid transparent;
     transition: all 0.3s ease;
+    width: 23%;
+    box-sizing: border-box;
+}
+
+.service-option input[type="radio"] {
+    margin-bottom: 5px; /* Add space between radio and text */
+    accent-color: var(--primary-green);
+    transform: scale(1.2);
+    flex-shrink: 0;
+}
+
+.service-label {
+    color: var(--text-white);
+    font-weight: 500;
+    text-align: left;
+    line-height: 1.4;
 }
 
 .service-option:hover {
@@ -1038,49 +1047,25 @@ textarea:focus {
     background-color: var(--accent-bg);
 }
 
-.service-option input[type="radio"] {
-    margin-right: 10px;
-    accent-color: var(--primary-green);
-    transform: scale(1.2);
-}
-
-.service-label {
-    color: var(--text-white);
-    font-weight: 500;
-    flex: 1;
-    text-align: left;
-    line-height: 1.4;
-}
-
-/* Submit Button States */
-.btn.enabled {
-    background-color: var(--primary-green);
-    transform: scale(1.02);
-    }
-
-/* iOS/Safari specific fixes */
-.service-option {
-    -webkit-user-select: none;
-    user-select: none;
-    -webkit-tap-highlight-color: transparent;
-}
-
-.star {
-    -webkit-tap-highlight-color: transparent;
-    -webkit-user-select: none;
-    user-select: none;
-}
-
-/* Mobile touch improvements */
 @media (max-width: 768px) {
-    .service-option {
-        padding: 1.2rem;
-        min-height: 70px;
+    .service-options {
+        flex-wrap: wrap;
     }
-    
+    .service-option {
+        width: 48%;
+        margin-bottom: 10px;
+    }
     .service-label {
-        font-size: 1rem;
-        line-height: 1.3;
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .service-options {
+        flex-direction: column;
+    }
+    .service-option {
+        width: 100%;
     }
 }
 
@@ -1182,13 +1167,12 @@ textarea:focus {
 
 .selected-stars i {
     font-size: 1.5rem;
-        color: #444;
+    color: #444;
 }
 
 .selected-stars i.selected {
     color: var(--star-color);
 }
-
 
 .form-fallback {
     margin-top: 1rem;
@@ -1322,12 +1306,6 @@ textarea:focus {
     .star {
         font-size: 2.5rem;
     }
-    
-    .service-options {
-        grid-template-columns: 1fr;
-    }
-
-    
 }
 
 @media (max-width: 768px) {
